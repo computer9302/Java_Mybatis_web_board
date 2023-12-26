@@ -1,6 +1,5 @@
 package com.db.dao;
 
-import java.security.PublicKey;
 import java.util.List;
 
 import org.apache.ibatis.session.SqlSession;
@@ -19,6 +18,7 @@ public class BoardDao_batis extends SqlMapConfig{
 			session = getSqlSessionFactory().openSession(true); //auto commit : true
 			
 			//mapper의 selectAll 결과값 list로 담아 res로 반환
+			
 			res = session.selectList("db.board.selectAll");
 		}catch (Exception e) {
 			e.printStackTrace();
